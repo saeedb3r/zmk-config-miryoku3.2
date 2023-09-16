@@ -194,6 +194,24 @@ behaviors {
                 , <&macro_tap &kp ESC &kp ESC &kp ESC>
                 ;
         };
+        alt_f4: alt_f4 {
+            label = "alt_f4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LALT>;
+        };
+        ctrl_f4: ctrl_f4 {
+            label = "ctrl_f4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LCTRL>;
+        };
         //FACT PRINT DIALOG
         ft_print: ft_print {
             label = "ft_print";
@@ -427,13 +445,13 @@ behaviors {
 // ------------------------------------------------------------------------------------------------------------
 // |     | QT WH | FR WH |           |       |      | # |     |      |          |         | fact print |     |
 // |     | QT SH | FR SH |           |       |      | # |     |      |          |         |            |     |
-// |     |       |       | tri_close |       |      | # |     | HELD | ft_proc  | ft_edit |            |     |
+// |     |       |       | alt_f4    |ctrl_f4|      | # |     | HELD | ft_proc  | ft_edit |            |     |
 //                       |           |       |      | # |     |      |          |
 
                         bindings = <
     &trans  &print_wq  &print_wf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &ft_print  &trans 
     &trans  &print_sq  &print_sf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &trans     &trans 
-    &trans  &trans     &trans     &ft_tri_close   &trans           &trans           &trans  &trans  &ft_proc  &ft_edit  &trans     &trans 
+    &trans  &trans     &trans     &alt_f4         &ctrl_f4         &trans           &trans  &trans  &ft_proc  &ft_edit  &trans     &trans 
                                   &onenote_paste  &ft_a4_scrn_sht  &screen_sht      &trans  &trans  &trans                                
                                         	        
                         >;
