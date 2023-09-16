@@ -140,6 +140,24 @@ behaviors {
                 , <&macro_tap &kp RET>
                 ;
         };
+ alt_f4: alt_f4 {
+            label = "alt_f4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LALT>;
+        };
+        ctrl_f4: ctrl_f4 {
+            label = "ctrl_f4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LCTRL>;
+        };
 
         //fact application macro
          ft_a4_scrn_sht: ft_a4_scrn_sht {
