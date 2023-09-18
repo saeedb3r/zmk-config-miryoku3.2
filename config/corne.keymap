@@ -452,7 +452,7 @@ behaviors {
                         bindings = <
     &trans  &print_wq  &print_wf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &ft_print  &trans 
     &trans  &print_sq  &print_sf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &trans     &trans 
-    &trans  &trans     &trans     &ft_tri_close   &trans           &trans           &trans  &trans  &ft_proc  &ft_edit  &trans     &trans 
+    &trans  &trans     &trans     &alt_f4   &ctrl_f4           &trans           &trans  &trans  &ft_proc  &ft_edit  &trans     &trans 
                                   &onenote_paste  &ft_a4_scrn_sht  &screen_sht      &trans  &trans  &trans                                
                                         	        
                         >;
