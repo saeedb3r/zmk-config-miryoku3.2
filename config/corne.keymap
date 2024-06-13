@@ -177,6 +177,18 @@ behaviors {
                 ;
         };
 
+ft_a4: ft_a4 {
+            label = "ft_a4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+             = <&macro_press &kp LSHFT &kp LCTRL>
+                , <&macro_tap &kp P>
+                , <&macro_release &kp LSHFT &kp LCTRL>
+                , <&macro_tap &kp TAB &kp TAB &kp TAB &kp DOWN &kp DOWN &kp TAB &kp TAB &kp RET>
+                ;
+        };
+
         ft_proc: ft_proc {
             label = "ft_proc";
             compatible = "zmk,behavior-macro";
@@ -453,7 +465,7 @@ behaviors {
     &trans  &print_wq  &print_wf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &ft_print  &trans 
     &trans  &print_sq  &print_sf  &trans          &trans           &trans           &trans  &trans  &trans    &trans    &trans     &trans 
     &trans  &trans     &trans     &alt_f4   &ctrl_f4           &trans           &trans  &trans  &ft_proc  &ft_edit  &trans     &trans 
-                                  &onenote_paste  &ft_a4_scrn_sht  &screen_sht      &trans  &trans  &trans                                
+                                  &onenote_paste  &ft_a4  &screen_sht      &trans  &trans  &trans                                
                                         	        
                         >;
                 };
